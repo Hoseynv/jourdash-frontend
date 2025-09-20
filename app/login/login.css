@@ -1,0 +1,136 @@
+/* Login page specific styles */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-image: url("/images/gradient-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    direction: rtl;
+}
+
+.login-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.floating-orbs {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.glass-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.glass-orb-large {
+    top: 25%;
+    left: 25%;
+    width: 8rem;
+    height: 8rem;
+    opacity: 0.5;
+    animation: pulse 2s infinite;
+}
+
+.glass-orb-medium {
+    top: 75%;
+    right: 25%;
+    width: 6rem;
+    height: 6rem;
+    opacity: 0.4;
+    animation: pulse 2s infinite;
+    animation-delay: 1s;
+}
+
+.glass-orb-small {
+    top: 50%;
+    right: 33.333333%;
+    width: 4rem;
+    height: 4rem;
+    opacity: 0.45;
+    animation: pulse 2s infinite;
+    animation-delay: 0.5s;
+}
+
+.login-card {
+    max-width: 28rem;
+    width: 126%;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+    border: transparent;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(40px) saturate(250%);
+    border: 1px solid rgba(255, 255, 255, 0);
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.3), 0 16px 64px rgba(255, 255, 255, 0.2), inset 0 3px 0 rgba(255, 255, 255, 0), inset 0 -1px 0 rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-2px);
+}
+
+.login-button {
+    background-color: #0c115b !important;
+    color: white !important;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.login-input {
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.login-input-ltr {
+    direction: ltr;
+    text-align: left;
+}
+
+.login-input::placeholder {
+    color: rgb(80, 80, 80);
+}
+
+.login-input-ltr::placeholder {
+    direction: rtl !important;
+    text-align: right;
+}
+
+.login-input:focus {
+    ring: 2px;
+    ring-color: rgb(96, 165, 250);
+    border-color: rgb(96, 165, 250);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
